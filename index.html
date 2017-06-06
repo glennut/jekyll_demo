@@ -1,0 +1,14 @@
+---
+layout: default
+title: glennut
+---
+<h2>{{ pages.title }}</h2>
+
+<p>Papers</p>
+
+<ul>
+
+	{% for post in site.posts %}
+		<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+	{% endfor %}
+</ul>
